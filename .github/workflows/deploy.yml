@@ -14,10 +14,10 @@ jobs:
 
     steps:
        -name: Checkout code
-        uses: actions/checkout@v3
+       -uses: actions/checkout@v3
 
        -name: Set up Node.js
-        uses: actions/setup-node@v3
+       -uses: actions/setup-node@v3
         with:
           node-version: '16'
       
@@ -28,7 +28,7 @@ jobs:
         run: npm run build 
 
        -name: Deploy to Vercel 
-        uses: amondnet/vercel-action@v21
+       -uses: amondnet/vercel-action@v21
         with:
           vercel-token: ${{secrets.VERCEL_TOKEN}}
           vercel-args: '--prod'
